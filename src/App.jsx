@@ -18,6 +18,7 @@ import AdminDashboard from "./components/admin/AdminDashboard";
 import CollectionPopup from "./components/CollectionPopup";
 import SearchModal from "./components/SearchModal";
 import Toast from "./components/common/Toast";
+import IntroScreen from "./components/IntroScreen";
 
 import { COLLECTIONS } from "./data/cakeData";
 import { sectionStore } from "./services/sectionStore";
@@ -45,6 +46,25 @@ export default function App() {
   const [collectionPopupOpen, setCollectionPopupOpen] = useState(false);
   const [searchModalOpen, setSearchModalOpen] = useState(false);
   const [toast, setToast] = useState(null);
+  const [showIntro, setShowIntro] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const hash = window.location.hash.toLowerCase();
+      if (hash.includes('admin')) return false;
+      return !sessionStorage.getItem('sanjus_intro_shown');
+    }
+    return true;
+  });
+
+  const handleFinishIntro = useCallback(() => {
+    setShowIntro(false);
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('sanjus_intro_shown', 'true');
+    }
+  }, []);
+
+  const handleReplayIntro = useCallback(() => {
+    setShowIntro(true);
+  }, []);
 
   // ── Dynamic Sections & Cakes from Stores ──────────────────────────────────
   const [sections, setSections] = useState([]);
@@ -332,6 +352,7 @@ export default function App() {
             onNavigateToAdmin={navigateToAdmin}
             onNavigateToGallery={navigateToGallery}
             onNavigateToCustomStudio={() => navigateToCustomCakes()}
+            onReplayIntro={handleReplayIntro}
           />
         </>
       )}
@@ -380,6 +401,9 @@ export default function App() {
         onUpdateQuantity={updateCartQuantity}
         onExploreCakes={() => navigateToBakery("hero")}
       />
+
+      {/* -- Brand Cinematic Intro Video & Transition -- */}
+      {showIntro && <IntroScreen onFinish={handleFinishIntro} />}
 
       {/* Floating Action Feedback Toast */}
       <Toast

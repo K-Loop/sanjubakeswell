@@ -2,7 +2,7 @@ import React from "react";
 import { PhoneIcon, MapPinIcon, WhatsAppIcon, CakeIcon, ArrowRightIcon } from "./Icons";
 import { BUSINESS_INFO, COLLECTIONS } from "../data/cakeData";
 
-export default function Footer({ onNavigateToAdmin, onNavigateToGallery, onNavigateToCustomStudio }) {
+export default function Footer({ onNavigateToAdmin, onNavigateToGallery, onNavigateToCustomStudio, onReplayIntro }) {
   const year = new Date().getFullYear();
 
   const quickLinks = COLLECTIONS.map((c) => ({
@@ -176,8 +176,7 @@ export default function Footer({ onNavigateToAdmin, onNavigateToGallery, onNavig
             © {year} <span className="text-[#FBF6EE] font-medium">{BUSINESS_INFO.name}</span>. All rights reserved. Thiruvallur, Tamil Nadu.
           </div>
           <div className="flex items-center gap-4 text-[11px]">
-            <span className="text-[#C9A24B]">{BUSINESS_INFO.tagline}</span>
-            <span className="text-white/20">&bull;</span>
+            <span className="text-[#C9A24B]">{BUSINESS_INFO.tagline}</span>{onReplayIntro && (<><span className="text-white/20">&bull;</span><button onClick={onReplayIntro} className="text-[#E9DCC5]/40 hover:text-[#C9A24B] transition-colors cursor-pointer text-[10px] uppercase tracking-wider" title="Watch Brand Intro Video">Watch Intro</button></>)}<span className="text-white/20">&bull;</span>
             <button
               onClick={onNavigateToAdmin}
               className="text-[#E9DCC5]/40 hover:text-[#C9A24B] transition-colors cursor-pointer text-[10px] uppercase tracking-wider"
