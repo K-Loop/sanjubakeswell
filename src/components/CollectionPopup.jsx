@@ -77,7 +77,7 @@ export default function CollectionPopup({ isOpen, onClose, sections, onSelectSec
           {visible.map((section) => (
             <button
               key={section.id}
-              onClick={() => { onSelectSection(section); onClose(); }}
+              onClick={() => { onSelectSection(section.id || section); onClose(); }}
               className="group relative rounded-2xl overflow-hidden border border-[#E9DCC5]/10 hover:border-[#C9A24B]/60 transition-all duration-300 hover:-translate-y-1 cursor-pointer text-left"
               style={{ aspectRatio: "4/3", background: "rgba(43, 27, 18, 0.8)" }}
             >
