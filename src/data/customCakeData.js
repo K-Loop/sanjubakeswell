@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 // Sanjus Bakesvelle - Custom Cake Atelier Comprehensive Categories & Types Dataset
 // Re-themed with Official Brand Palette: Chocolate Brown, Cream, Warm Beige, Mocha, Caramel & Gold
+=======
+// Sanjus Bakeswell - Custom Cake Atelier Comprehensive Categories & Types Dataset
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
 
 export const CUSTOM_CATEGORIES = {
   tier: {
@@ -8,6 +12,7 @@ export const CUSTOM_CATEGORIES = {
     tagline: "Regal Multi-Tier Architectures",
     iconName: "FaLayerGroup",
     theme: {
+<<<<<<< HEAD
       primary: "#C9A24B", // Gold
       secondary: "#B87C4C", // Caramel
       accent: "text-[#C9A24B]",
@@ -16,6 +21,16 @@ export const CUSTOM_CATEGORIES = {
       activeGlow: "shadow-[0_4px_25px_rgba(201,162,75,0.25)]",
       gradient: "from-[#3E2715] via-[#2B1B12] to-[#1F140D]",
       bgTint: "rgba(201, 162, 75, 0.08)"
+=======
+      primary: "#f59e0b", // Gold
+      secondary: "#8b5cf6", // Royal Violet
+      accent: "text-amber-300",
+      badgeBg: "bg-amber-500/20 text-amber-300 border-amber-400/40",
+      border: "border-amber-500/40 hover:border-amber-400",
+      activeGlow: "shadow-[0_0_30px_rgba(245,158,11,0.35)]",
+      gradient: "from-amber-500 via-orange-500 to-purple-600",
+      bgTint: "rgba(245, 158, 11, 0.08)"
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
     },
     types: [
       {
@@ -93,6 +108,7 @@ export const CUSTOM_CATEGORIES = {
     tagline: "3D Fondant & Character Wonderlands",
     iconName: "FaPaintBrush",
     theme: {
+<<<<<<< HEAD
       primary: "#B87C4C", // Caramel
       secondary: "#EFC9AE", // Soft Peach
       accent: "text-[#EFC9AE]",
@@ -101,6 +117,16 @@ export const CUSTOM_CATEGORIES = {
       activeGlow: "shadow-[0_4px_25px_rgba(184,124,76,0.25)]",
       gradient: "from-[#3E2715] via-[#2B1B12] to-[#1F140D]",
       bgTint: "rgba(184, 124, 76, 0.08)"
+=======
+      primary: "#ec4899", // Bubblegum Pink
+      secondary: "#eab308", // Sunny Yellow
+      accent: "text-pink-300",
+      badgeBg: "bg-pink-500/20 text-pink-300 border-pink-400/40",
+      border: "border-pink-500/40 hover:border-pink-400",
+      activeGlow: "shadow-[0_0_30px_rgba(236,72,153,0.35)]",
+      gradient: "from-pink-500 via-rose-500 to-yellow-400",
+      bgTint: "rgba(236, 72, 153, 0.08)"
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
     },
     types: [
       {
@@ -178,6 +204,7 @@ export const CUSTOM_CATEGORIES = {
     tagline: "High-Definition Sugar Sheet Prints",
     iconName: "FaCamera",
     theme: {
+<<<<<<< HEAD
       primary: "#C9A24B", // Gold
       secondary: "#5C4033", // Coffee Brown
       accent: "text-[#C9A24B]",
@@ -186,6 +213,16 @@ export const CUSTOM_CATEGORIES = {
       activeGlow: "shadow-[0_4px_25px_rgba(201,162,75,0.25)]",
       gradient: "from-[#3E2715] via-[#2B1B12] to-[#1F140D]",
       bgTint: "rgba(201, 162, 75, 0.08)"
+=======
+      primary: "#06b6d4", // Cyan
+      secondary: "#3b82f6", // Electric Blue
+      accent: "text-cyan-300",
+      badgeBg: "bg-cyan-500/20 text-cyan-300 border-cyan-400/40",
+      border: "border-cyan-500/40 hover:border-cyan-400",
+      activeGlow: "shadow-[0_0_30px_rgba(6,182,212,0.35)]",
+      gradient: "from-cyan-500 via-sky-500 to-blue-600",
+      bgTint: "rgba(6, 182, 212, 0.08)"
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
     },
     types: [
       {
@@ -263,6 +300,7 @@ export const CUSTOM_CATEGORIES = {
     tagline: "Wafer Paper & Pattern Art Prints",
     iconName: "FaPrint",
     theme: {
+<<<<<<< HEAD
       primary: "#B87C4C", // Caramel
       secondary: "#7B5645", // Mocha
       accent: "text-[#B87C4C]",
@@ -271,6 +309,16 @@ export const CUSTOM_CATEGORIES = {
       activeGlow: "shadow-[0_4px_25px_rgba(184,124,76,0.25)]",
       gradient: "from-[#3E2715] via-[#2B1B12] to-[#1F140D]",
       bgTint: "rgba(184, 124, 76, 0.08)"
+=======
+      primary: "#a855f7", // Vivid Purple
+      secondary: "#ec4899", // Neon Magenta
+      accent: "text-purple-300",
+      badgeBg: "bg-purple-500/20 text-purple-300 border-purple-400/40",
+      border: "border-purple-500/40 hover:border-purple-400",
+      activeGlow: "shadow-[0_0_30px_rgba(168,85,247,0.35)]",
+      gradient: "from-purple-500 via-fuchsia-500 to-pink-500",
+      bgTint: "rgba(168, 85, 247, 0.08)"
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
     },
     types: [
       {
@@ -348,6 +396,7 @@ export const CUSTOM_CATEGORIES = {
     tagline: "Flowing Waterfall & Pyro Sparkler Cakes",
     iconName: "FaTint",
     theme: {
+<<<<<<< HEAD
       primary: "#C9A24B", // Gold
       secondary: "#3E2715", // Chocolate Brown
       accent: "text-[#C9A24B]",
@@ -356,6 +405,16 @@ export const CUSTOM_CATEGORIES = {
       activeGlow: "shadow-[0_4px_25px_rgba(201,162,75,0.25)]",
       gradient: "from-[#3E2715] via-[#2B1B12] to-[#1F140D]",
       bgTint: "rgba(201, 162, 75, 0.08)"
+=======
+      primary: "#f97316", // Flame Orange
+      secondary: "#ef4444", // Lava Crimson
+      accent: "text-orange-300",
+      badgeBg: "bg-orange-500/20 text-orange-300 border-orange-400/40",
+      border: "border-orange-500/40 hover:border-orange-400",
+      activeGlow: "shadow-[0_0_30px_rgba(249,115,22,0.4)]",
+      gradient: "from-orange-500 via-amber-500 to-red-600",
+      bgTint: "rgba(249, 115, 22, 0.08)"
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
     },
     types: [
       {
@@ -425,6 +484,7 @@ export const CUSTOM_CATEGORIES = {
         desc: "Grand gala showpiece with multi-level lighted acrylic fountains pumping glowing edible chocolate syrup."
       }
     ]
+<<<<<<< HEAD
   },
 
   fondant: {
@@ -502,3 +562,7 @@ export const CUSTOM_CATEGORIES = {
   }
 };
 
+=======
+  }
+};
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30

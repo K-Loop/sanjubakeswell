@@ -13,6 +13,7 @@ import CustomCakeModal from "./components/CustomCakeModal";
 import QuickViewModal from "./components/QuickViewModal";
 import CartTray from "./components/CartTray";
 import CustomCakesPage from "./components/CustomCakesPage";
+<<<<<<< HEAD
 import GalleryPage from "./components/GalleryPage";
 import AdminDashboard from "./components/admin/AdminDashboard";
 import CollectionPopup from "./components/CollectionPopup";
@@ -35,6 +36,26 @@ export default function App() {
         hash.includes("custom-studio") ||
         hash.startsWith("#studio-")
       ) {
+=======
+
+import { COLLECTIONS } from "./data/cakeData";
+
+// All section IDs in order — drives navbar colour switching
+const SECTION_IDS = [
+  "hero",
+  ...COLLECTIONS.map((c) => c.id),
+  "customised-cakes",
+  "menu",
+  "contact",
+];
+
+export default function App() {
+  // ── Multi-Page Navigation State ('home' vs 'custom-cakes') ────────────────
+  const [currentView, setCurrentView] = useState(() => {
+    if (typeof window !== "undefined") {
+      const hash = window.location.hash.toLowerCase();
+      if (hash.includes("custom-cake") || hash.includes("custom-studio")) {
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
         return "custom-cakes";
       }
     }
@@ -42,6 +63,7 @@ export default function App() {
   });
 
   const [selectedCustomConcept, setSelectedCustomConcept] = useState(null);
+<<<<<<< HEAD
   const [collectionPopupOpen, setCollectionPopupOpen] = useState(false);
   const [searchModalOpen, setSearchModalOpen] = useState(false);
   const [toast, setToast] = useState(null);
@@ -60,11 +82,14 @@ export default function App() {
   }, []);
 
   const activeSections = sections.filter((s) => s.isActive);
+=======
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
 
   // Sync browser hash / forward / back buttons
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.toLowerCase();
+<<<<<<< HEAD
       if (hash.includes("admin")) {
         setCurrentView("admin");
       } else if (hash === "#gallery" || hash.startsWith("#gallery/")) {
@@ -89,6 +114,12 @@ export default function App() {
             document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
           }, 100);
         }
+=======
+      if (hash.includes("custom-cake") || hash.includes("custom-studio")) {
+        setCurrentView("custom-cakes");
+      } else if (!hash || hash === "#" || hash === "#home" || hash === "#hero" || hash.startsWith("#birthday") || hash.startsWith("#chocolate") || hash.startsWith("#menu") || hash.startsWith("#contact")) {
+        setCurrentView("home");
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
       }
     };
 
@@ -96,6 +127,7 @@ export default function App() {
     return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
 
+<<<<<<< HEAD
   const navigateToCustomCakes = useCallback((concept = null, targetSection = null) => {
     setSelectedCustomConcept(concept);
     const hashTarget = targetSection ? `#${targetSection}` : "#custom-cakes";
@@ -119,10 +151,17 @@ export default function App() {
   const navigateToAdmin = useCallback(() => {
     window.location.hash = "admin";
     setCurrentView("admin");
+=======
+  const navigateToCustomCakes = useCallback((concept = null) => {
+    setSelectedCustomConcept(concept);
+    window.location.hash = "custom-cakes";
+    setCurrentView("custom-cakes");
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   const navigateToBakery = useCallback((sectionId = "hero") => {
+<<<<<<< HEAD
     setCurrentView("home");
     window.location.hash = sectionId && sectionId !== "hero" ? `#${sectionId}` : "";
     if (!sectionId || sectionId === "hero") {
@@ -140,11 +179,20 @@ export default function App() {
   }, []);
 
   // ── Active Section for Main Store (drives Navbar active link) ──────────────
+=======
+    window.location.hash = sectionId ? `#${sectionId}` : "";
+    setCurrentView("home");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
+  // ── Active Section for Main Store (drives Navbar colour) ──────────────────
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
   const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
     if (currentView !== "home") return;
 
+<<<<<<< HEAD
     const observedIds = [
       "hero",
       ...activeSections.map((s) => s.id),
@@ -156,6 +204,11 @@ export default function App() {
     const observers = [];
 
     observedIds.forEach((id) => {
+=======
+    const observers = [];
+
+    SECTION_IDS.forEach((id) => {
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
       const el = document.getElementById(id);
       if (!el) return;
 
@@ -180,16 +233,25 @@ export default function App() {
     return () => {
       observers.forEach((obs) => obs.disconnect());
     };
+<<<<<<< HEAD
   }, [currentView, activeSections]);
+=======
+  }, [currentView]);
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
 
   // ── Active Flavour World State ──────────────────────────────────────────────
   const [activeFlavour, setActiveFlavour] = useState("chocolate");
 
+<<<<<<< HEAD
   // ── Cart / Order Tray State & Handlers ─────────────────────────────────────
+=======
+  // ── Cart / Order Tray State ─────────────────────────────────────────────────
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
   const [cartItems, setCartItems] = useState([]);
   const [cartOpen, setCartOpen] = useState(false);
 
   const addToCart = useCallback((cake) => {
+<<<<<<< HEAD
     const size = cake.selectedSize || "1 kg";
     setCartItems((prev) => {
       const existingIdx = prev.findIndex(
@@ -226,6 +288,9 @@ export default function App() {
       updated[idx] = { ...item, quantity: newQty };
       return updated;
     });
+=======
+    setCartItems((prev) => [...prev, cake]);
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
   }, []);
 
   const removeFromCart = useCallback((idx) => {
@@ -249,6 +314,7 @@ export default function App() {
     setCustomCakeOpen(true);
   }, []);
 
+<<<<<<< HEAD
   // Build rendered collections: each active section populated with cakes from cakeStore
   const renderedCollections = activeSections.map((section) => {
     const original = COLLECTIONS.find((c) => c.id === section.id);
@@ -277,10 +343,20 @@ export default function App() {
         <CustomCakesPage
           onBackToBakery={(sectionId) => navigateToBakery(sectionId || "hero")}
           onBackToMenu={() => navigateToBakery("menu")}
+=======
+  return (
+    <div className="min-h-screen bg-[#0d0705] text-[#f7efe9] antialiased overflow-x-hidden">
+
+      {/* ── CONDITIONAL ROUTING: Custom Cakes Page vs Main Bakery Store ── */}
+      {currentView === "custom-cakes" ? (
+        <CustomCakesPage
+          onBackToBakery={() => navigateToBakery("hero")}
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
           initialConcept={selectedCustomConcept}
         />
       ) : (
         <>
+<<<<<<< HEAD
           {/* ── Fixed Main Store Navbar ── */}
           <Navbar
             activeSection={activeSection}
@@ -296,6 +372,21 @@ export default function App() {
           {/* ── Fixed Right-Edge Custom Cakes Atelier Tab (Harmonized for Desktop & Tablet) ── */}
           <CustomCakeEdgeTab
             onOpenCustomModal={() => handleOpenCustomCakeModal()}
+=======
+          {/* ── Fixed Main Store Navbar — changes color per section ── */}
+          <Navbar
+            activeSection={activeSection}
+            cartCount={cartItems.length}
+            onOpenCart={() => setCartOpen(true)}
+            onOpenSearch={() => document.getElementById("menu")?.scrollIntoView({ behavior: "smooth" })}
+            onOpenCustomCakeModal={() => navigateToCustomCakes()}
+            onNavigateToCustomStudio={() => navigateToCustomCakes()}
+          />
+
+          {/* ── Fixed Right-Edge Custom Cakes Atelier Tab ── */}
+          <CustomCakeEdgeTab
+            onOpenCustomModal={() => navigateToCustomCakes()}
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
             onOpenCustomStudio={() => navigateToCustomCakes()}
           />
 
@@ -304,6 +395,7 @@ export default function App() {
             <Hero
               activeFlavour={activeFlavour}
               setActiveFlavour={setActiveFlavour}
+<<<<<<< HEAD
               onOpenCustomCakeModal={() => handleOpenCustomCakeModal()}
               onNavigateToCustomStudio={() => navigateToCustomCakes()}
               onOpenCollectionPopup={() => setCollectionPopupOpen(true)}
@@ -311,6 +403,13 @@ export default function App() {
 
             {/* Dynamic Cake Collections based on Active Sections from sectionStore */}
             {renderedCollections.map((collection) => (
+=======
+              onOpenCustomCakeModal={() => navigateToCustomCakes()}
+              onNavigateToCustomStudio={() => navigateToCustomCakes()}
+            />
+
+            {COLLECTIONS.map((collection) => (
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
               <CakeCollectionSection
                 key={collection.id}
                 collection={collection}
@@ -323,6 +422,7 @@ export default function App() {
               onOpenCustomModal={() => navigateToCustomCakes()}
               onNavigateToCustomStudio={(cat) => navigateToCustomCakes(cat)}
             />
+<<<<<<< HEAD
 
             <FullMenuSection onAddToCart={addToCart} onQuickView={openQuickView} />
             <ContactSection onNavigateToCustomStudio={() => navigateToCustomCakes()} />
@@ -333,10 +433,19 @@ export default function App() {
             onNavigateToGallery={navigateToGallery}
             onNavigateToCustomStudio={() => navigateToCustomCakes()}
           />
+=======
+            
+            <FullMenuSection onAddToCart={addToCart} onQuickView={openQuickView} />
+            <ContactSection />
+          </main>
+
+          <Footer />
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
         </>
       )}
 
       {/* ── Modals & Trays (Shared across app) ── */}
+<<<<<<< HEAD
       <SearchModal
         isOpen={searchModalOpen}
         onClose={() => setSearchModalOpen(false)}
@@ -355,6 +464,8 @@ export default function App() {
         }}
       />
 
+=======
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
       <QuickViewModal
         cake={quickViewCake}
         isOpen={!!quickViewCake}
@@ -377,6 +488,7 @@ export default function App() {
         items={cartItems}
         onRemoveItem={removeFromCart}
         onClearCart={clearCart}
+<<<<<<< HEAD
         onUpdateQuantity={updateCartQuantity}
         onExploreCakes={() => navigateToBakery("hero")}
       />
@@ -388,6 +500,8 @@ export default function App() {
         actionLabel={toast?.actionLabel}
         onAction={toast?.onAction}
         onClose={() => setToast(null)}
+=======
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
       />
     </div>
   );

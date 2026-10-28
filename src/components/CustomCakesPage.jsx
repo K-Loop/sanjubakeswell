@@ -30,7 +30,11 @@ export default function CustomCakesPage({ onBackToBakery, initialConcept = null 
   };
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-[#1F140D] text-[#FBF6EE] antialiased selection:bg-[#B87C4C] selection:text-white font-brand-sans overflow-x-hidden">
+=======
+    <div className="min-h-screen bg-[#0e071e] text-[#f7efe9] antialiased selection:bg-[#ff2d78] selection:text-white overflow-x-hidden">
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
       
       {/* ── Standalone Dedicated Custom Atelier Navbar ── */}
       <CustomCakeNavbar

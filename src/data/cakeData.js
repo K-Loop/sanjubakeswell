@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 // Sanjus Bakesvelle - Full Product & Menu Dataset (Official Brand Guidelines)
 
 export const BUSINESS_INFO = {
   name: "Sanjus Bakesvelle",
+=======
+// Sanjus Bakeswell - Full Product & Menu Dataset
+
+export const BUSINESS_INFO = {
+  name: "Sanjus Bakeswell",
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
   tagline: "Made to Melt Hearts",
   descriptor: "ARTISAN BAKERY",
   phone: "+91 93841 06660",
   phoneRaw: "919384106660",
+<<<<<<< HEAD
   phone2: "+91 93843 06660",
   phoneRaw2: "919384306660",
   address: "Shop No. 1 & 2, Tippu Sultan Street, Pavendar Nagar, Thiruvallur, Tamil Nadu – 600056",
@@ -13,6 +21,11 @@ export const BUSINESS_INFO = {
   timing: "10:00 AM – 10:00 PM (All Days)",
   instagram: "https://www.instagram.com/sanjusbakesvelle/",
   mapsUrl: "https://maps.google.com/?q=Shop+No.+1+%26+2,+Tippu+Sultan+Street,+Pavendar+Nagar,+Thiruvallur,+Tamil+Nadu+600056"
+=======
+  address: "Shop No. 1 & 2, Tippu Sultan Street, Pavendar Nagar, Thiruvallur, Tamil Nadu – 600056",
+  cateringNote: "Outside catering orders accepted for weddings, parties, corporate events & milestone celebrations.",
+  timing: "10:00 AM – 10:00 PM (All Days)"
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
 };
 
 export const FLAVOUR_THEMES = {
@@ -20,6 +33,7 @@ export const FLAVOUR_THEMES = {
     id: "chocolate",
     name: "Chocolate",
     tagline: "Rich & Indulgent",
+<<<<<<< HEAD
     bgClass: "bg-[#1F140D]",
     accentClass: "text-[#C9A24B] border-[#C9A24B]",
     surface: "from-[#2B1B12] via-[#21140D] to-[#1F140D]",
@@ -29,12 +43,24 @@ export const FLAVOUR_THEMES = {
     thumb: "/cakes images/thumbs/chocolate.webp",
     colorHex: "#3E2715",
     glowColor: "rgba(201, 162, 75, 0.25)",
+=======
+    bgClass: "bg-[#170e0a]",
+    accentClass: "text-[#e29352] border-[#e29352]",
+    surface: "from-[#20120b] via-[#140b07] to-[#0d0705]",
+    cardBg: "rgba(35, 20, 14, 0.7)",
+    heroImage: "/cakes images/chocolate.webp",
+    bgImage: "/background images/page 1.webp",
+    thumb: "/cakes images/thumbs/chocolate.webp",
+    colorHex: "#5c2c16",
+    glowColor: "rgba(184, 80, 24, 0.35)",
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
     quote: "Decadent dark cocoa, molten silky ganache and velvety truffles crafted for pure bliss."
   },
   butterscotch: {
     id: "butterscotch",
     name: "Butterscotch",
     tagline: "Caramel & Gold",
+<<<<<<< HEAD
     bgClass: "bg-[#24170F]",
     accentClass: "text-[#C9A24B] border-[#C9A24B]",
     surface: "from-[#331F14] via-[#24170F] to-[#1F140D]",
@@ -44,12 +70,24 @@ export const FLAVOUR_THEMES = {
     thumb: "/cakes images/thumbs/butterscotch.webp",
     colorHex: "#B87C4C",
     glowColor: "rgba(184, 124, 76, 0.25)",
+=======
+    bgClass: "bg-[#1c1407]",
+    accentClass: "text-[#f3b555] border-[#f3b555]",
+    surface: "from-[#281b0a] via-[#1c1306] to-[#0f0902]",
+    cardBg: "rgba(42, 28, 12, 0.7)",
+    heroImage: "/cakes images/Butterscotch.webp",
+    bgImage: "/background images/page 3.webp",
+    thumb: "/cakes images/thumbs/butterscotch.webp",
+    colorHex: "#c5872b",
+    glowColor: "rgba(235, 160, 48, 0.35)",
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
     quote: "Toasted caramel drips, roasted praline crunch and golden buttery velvet cream."
   },
   strawberry: {
     id: "strawberry",
     name: "Strawberry",
     tagline: "Fresh & Romantic",
+<<<<<<< HEAD
     bgClass: "bg-[#261715]",
     accentClass: "text-[#EFC9AE] border-[#EFC9AE]",
     surface: "from-[#351E1C] via-[#261715] to-[#1F140D]",
@@ -59,12 +97,24 @@ export const FLAVOUR_THEMES = {
     thumb: "/cakes images/thumbs/strawberry.webp",
     colorHex: "#7B5645",
     glowColor: "rgba(239, 201, 174, 0.20)",
+=======
+    bgClass: "bg-[#1a0a0f]",
+    accentClass: "text-[#f47291] border-[#f47291]",
+    surface: "from-[#2a1018] via-[#18090f] to-[#0c0306]",
+    cardBg: "rgba(45, 18, 28, 0.7)",
+    heroImage: "/cakes images/Strawberry.webp",
+    bgImage: "/background images/page 4.webp",
+    thumb: "/cakes images/thumbs/strawberry.webp",
+    colorHex: "#d94268",
+    glowColor: "rgba(225, 65, 105, 0.35)",
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
     quote: "Sun-ripened berry glazes, cloud-soft pink sponge and fresh fruit infusions."
   },
   blueberry: {
     id: "blueberry",
     name: "Blueberry",
     tagline: "Silky & Distinctive",
+<<<<<<< HEAD
     bgClass: "bg-[#20171B]",
     accentClass: "text-[#E9DCC5] border-[#E9DCC5]",
     surface: "from-[#2D1F26] via-[#20171B] to-[#1F140D]",
@@ -74,12 +124,24 @@ export const FLAVOUR_THEMES = {
     thumb: "/cakes images/thumbs/blueberry.webp",
     colorHex: "#5C4033",
     glowColor: "rgba(233, 220, 197, 0.20)",
+=======
+    bgClass: "bg-[#0b0c1c]",
+    accentClass: "text-[#8a9cf7] border-[#8a9cf7]",
+    surface: "from-[#14152e] via-[#0d0e1f] to-[#06060f]",
+    cardBg: "rgba(22, 25, 52, 0.7)",
+    heroImage: "/cakes images/blueberry.webp",
+    bgImage: "/background images/page 1.webp",
+    thumb: "/cakes images/thumbs/blueberry.webp",
+    colorHex: "#4553b8",
+    glowColor: "rgba(95, 115, 230, 0.35)",
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
     quote: "Wild blueberries, subtle lavender undertones and luscious velvety cream."
   },
   vanilla: {
     id: "vanilla",
     name: "Vanilla",
     tagline: "Calm & Refined",
+<<<<<<< HEAD
     bgClass: "bg-[#251A12]",
     accentClass: "text-[#C9A24B] border-[#C9A24B]",
     surface: "from-[#322318] via-[#251A12] to-[#1F140D]",
@@ -89,18 +151,37 @@ export const FLAVOUR_THEMES = {
     thumb: "/cakes images/thumbs/vanilla.webp",
     colorHex: "#5C4033",
     glowColor: "rgba(201, 162, 75, 0.20)",
+=======
+    bgClass: "bg-[#16120e]",
+    accentClass: "text-[#e9c79f] border-[#e9c79f]",
+    surface: "from-[#241e17] via-[#17130e] to-[#0d0a07]",
+    cardBg: "rgba(38, 30, 22, 0.7)",
+    heroImage: "/cakes images/Vanilla.webp",
+    bgImage: "/background images/page 2.webp",
+    thumb: "/cakes images/thumbs/vanilla.webp",
+    colorHex: "#e0be8d",
+    glowColor: "rgba(225, 190, 140, 0.35)",
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
     quote: "Madagascar vanilla pods, delicate whipped ivory buttercream and timeless elegance."
   }
 };
 
+<<<<<<< HEAD
 // All Cake Collections matching the brand guidelines and official categories
+=======
+// All Cake Collections matching the design blueprint & collage
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
 export const COLLECTIONS = [
   {
     id: "birthday",
     title: "Birthday Cakes",
     categoryBadge: "CELEBRATIONS",
     subtitle: "Make every birthday sweeter with our handcrafted cakes, designed to create unforgettable moments.",
+<<<<<<< HEAD
     bgTheme: "from-[#2B1B12] via-[#24170F] to-[#1F140D]",
+=======
+    bgTheme: "from-[#230f17] via-[#1a0a11] to-[#12060a]",
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
     bgImage: "/background images/page 2.webp",
     featuredCake: "/cakes images/Strawberry mousse cake.webp",
     filters: ["All", "Kids", "Theme Cakes", "Classic", "Photo Cakes", "Premium"],
@@ -163,7 +244,11 @@ export const COLLECTIONS = [
     title: "Chocolate Cakes",
     categoryBadge: "RICH & INDULGENT",
     subtitle: "Decadent layers, premium cocoa and irresistible textures for true chocolate lovers.",
+<<<<<<< HEAD
     bgTheme: "from-[#27170E] via-[#21140D] to-[#1F140D]",
+=======
+    bgTheme: "from-[#22120a] via-[#160c07] to-[#0c0603]",
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
     bgImage: "/background images/page 3.webp",
     featuredCake: "/cakes images/chocolate.webp",
     filters: ["All", "Truffle", "Dark Chocolate", "Chocolate Fudge", "Nutella", "Premium"],
@@ -225,7 +310,11 @@ export const COLLECTIONS = [
     title: "Butterscotch Cakes",
     categoryBadge: "CLASSIC FAVOURITE",
     subtitle: "A timeless delight with rich butterscotch flavour, crunchy praline and creamy layers.",
+<<<<<<< HEAD
     bgTheme: "from-[#2E1D13] via-[#24170F] to-[#1F140D]",
+=======
+    bgTheme: "from-[#281b0a] via-[#1d1306] to-[#0f0902]",
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
     bgImage: "/background images/page 1.webp",
     featuredCake: "/cakes images/Butterscotch.webp",
     filters: ["All", "Classic", "Praline Crunch", "Premium", "Designer"],
@@ -287,7 +376,11 @@ export const COLLECTIONS = [
     title: "Fruit & Berry Cakes",
     categoryBadge: "FRESH & VIBRANT",
     subtitle: "Bursting with real fruits, berries and refreshing flavours for a naturally delightful experience.",
+<<<<<<< HEAD
     bgTheme: "from-[#2C1917] via-[#231514] to-[#1F140D]",
+=======
+    bgTheme: "from-[#2b0f19] via-[#1a080f] to-[#0e0308]",
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
     bgImage: "/background images/page 4.webp",
     featuredCake: "/cakes images/Strawberry.webp",
     filters: ["All", "Strawberry", "Blueberry", "Mixed Fruit", "Raspberry", "Exotic"],
@@ -349,7 +442,11 @@ export const COLLECTIONS = [
     title: "Black Forest & White Forest",
     categoryBadge: "TIMELESS CLASSICS",
     subtitle: "Light, creamy and layered with irresistible flavours that never go out of style.",
+<<<<<<< HEAD
     bgTheme: "from-[#221A15] via-[#1F1612] to-[#1F140D]",
+=======
+    bgTheme: "from-[#111e17] via-[#0d1611] to-[#070c09]",
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
     bgImage: "/background images/page 3.webp",
     featuredCake: "/cakes images/Blackforest.webp",
     filters: ["All", "Black Forest", "White Forest", "Cherry", "Premium"],
@@ -411,7 +508,11 @@ export const COLLECTIONS = [
     title: "Mousse Cakes & Cheesecakes",
     categoryBadge: "SILKY & SMOOTH",
     subtitle: "Luxurious textures, rich flavours and a melt-in-your-mouth experience for dessert lovers.",
+<<<<<<< HEAD
     bgTheme: "from-[#291B24] via-[#21151D] to-[#1F140D]",
+=======
+    bgTheme: "from-[#16122d] via-[#0f0c20] to-[#080612]",
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
     bgImage: "/background images/page 1.webp",
     featuredCake: "/cakes images/Blueberry Cheesecake.webp",
     filters: ["All", "Mousse Cakes", "Cheesecakes", "No-Bake", "Premium"],
@@ -473,7 +574,11 @@ export const COLLECTIONS = [
     title: "Chef Specials",
     categoryBadge: "SIGNATURE CREATIONS",
     subtitle: "Exclusive creations crafted by our chefs, combining unique flavours and artistic designs.",
+<<<<<<< HEAD
     bgTheme: "from-[#2C2114] via-[#231A10] to-[#1F140D]",
+=======
+    bgTheme: "from-[#1a1710] via-[#12100b] to-[#0a0805]",
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
     bgImage: "/background images/page 3.webp",
     featuredCake: "/cakes images/Pistachio Mousse Cake.webp",
     filters: ["All", "Signature", "Premium", "Limited Edition", "Festival Special"],
@@ -529,6 +634,7 @@ export const COLLECTIONS = [
         description: "Dark roasted Arabica coffee cream paired with butterscotch caramel ripple."
       }
     ]
+<<<<<<< HEAD
   },
   {
     id: "bento-cakes",
@@ -607,6 +713,12 @@ export const COLLECTIONS = [
 ];
 
 // Additional Bakery Products from Sanjus Bakesvelle official menu
+=======
+  }
+];
+
+// Additional Bakery Products from Sanjus Bakeswell official menu
+>>>>>>> 5d3e0b811915522cca4d369102568fbd1baead30
 export const PINATA_CAKES = [
   { id: "pinata-1", name: "Dark Chocolate Pinata", price: 1100, image: "/cakes images/chocolate.webp", desc: "Hard chocolate shell containing assorted chocolates, hammer included." },
   { id: "pinata-2", name: "White Chocolate Pinata", price: 1200, image: "/cakes images/Vanilla.webp", desc: "White chocolate dome shell filled with surprise treats and edible sprinkles." }
