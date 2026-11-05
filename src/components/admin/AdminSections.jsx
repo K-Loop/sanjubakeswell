@@ -160,7 +160,7 @@ export default function AdminSections() {
                 type="text"
                 value={formData.image}
                 onChange={(e) => setFormData({ ...formData, image: e.target.value })}
-                placeholder="/cakes images/..."
+                placeholder="Upload or enter image URL"
                 className="w-full px-3.5 py-2.5 rounded-xl bg-[#1A100A] border border-white/15 text-sm text-[#FBF6EE] focus:outline-none focus:border-[#C9A24B]"
               />
             </div>

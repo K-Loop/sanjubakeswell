@@ -1,0 +1,44 @@
+[
+  {
+    "id": "gal-1",
+    "image": "/cakes images/chocolate.webp",
+    "title": "Rich Chocolate Truffle Cake",
+    "category": "Chocolate",
+    "displayOrder": 0
+  },
+  {
+    "id": "gal-2",
+    "image": "/cakes images/Strawberry mousse cake.webp",
+    "title": "Fresh Strawberry Mousse Cake",
+    "category": "Celebration",
+    "displayOrder": 1
+  },
+  {
+    "id": "gal-3",
+    "image": "/cakes images/Blueberry Cheesecake.webp",
+    "title": "Wild Blueberry Cheesecake",
+    "category": "Cheesecake",
+    "displayOrder": 2
+  },
+  {
+    "id": "gal-4",
+    "image": "/cakes images/Caramel Crunch Cake.webp",
+    "title": "Caramel Crunch Celebration Cake",
+    "category": "Celebration",
+    "displayOrder": 3
+  },
+  {
+    "id": "gal-5",
+    "image": "/cakes images/Pistachio Mousse Cake.webp",
+    "title": "Pistachio Royale Mousse Cake",
+    "category": "Mousse",
+    "displayOrder": 4
+  },
+  {
+    "id": "gal-6",
+    "image": "/cakes images/Tiramisu Cake.webp",
+    "title": "Classic Tiramisu Celebration Cake",
+    "category": "Premium",
+    "displayOrder": 5
+  }
+]

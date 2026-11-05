@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { CloseIcon } from "./Icons";
 import { galleryStore } from "../services/galleryStore";
+import { galleryApi, getImageUrl } from "../services/api";
 import { FaExpand, FaChevronLeft, FaChevronRight, FaImages } from "react-icons/fa";
 import { BUSINESS_INFO } from "../data/cakeData";
 
@@ -10,8 +11,41 @@ export default function GalleryPage({ onBackToBakery }) {
   const [activeCategory, setActiveCategory] = useState("All");
 
   useEffect(() => {
-    const unsub = galleryStore.subscribe(setImages);
-    return unsub;
+    let mounted = true;
+    galleryApi
+      .getGallery({ limit: 48 })
+      .then((res) => {
+        if (!mounted) return;
+        if (res && res.items && res.items.length > 0) {
+          const mapped = res.items.map((i) => ({
+            id: i.id,
+            image: getImageUrl(i.url),
+            thumb: getImageUrl(i.thumbUrl || i.url),
+            altText: i.title || "Sanjus Bakesvelle artisanal cake",
+            category: i.category || "General",
+          }));
+          setImages(mapped);
+        } else {
+          const unsub = galleryStore.subscribe((stored) => {
+            if (mounted) {
+              setImages(stored.map((s) => ({ ...s, image: getImageUrl(s.image) })));
+            }
+          });
+          return () => unsub();
+        }
+      })
+      .catch(() => {
+        const unsub = galleryStore.subscribe((stored) => {
+          if (mounted) {
+            setImages(stored.map((s) => ({ ...s, image: getImageUrl(s.image) })));
+          }
+        });
+        return () => unsub();
+      });
+
+    return () => {
+      mounted = false;
+    };
   }, []);
 
   // Derive categories safely
@@ -139,7 +173,7 @@ export default function GalleryPage({ onBackToBakery }) {
                 {/* Fixed Aspect Ratio Image Container */}
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#1A100A]">
                   <img
-                    src={img.image}
+                    src={img.thumb || img.image}
                     alt={img.altText || "Sanjus Bakesvelle artisanal cake"}
                     loading="lazy"
                     decoding="async"

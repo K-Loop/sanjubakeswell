@@ -1,0 +1,58 @@
+server {
+    listen 80;
+    server_name sanjus.k-loop.in;
+
+    # Redirect plain HTTP to HTTPS (uncomment when SSL/Certbot is set up)
+    # return 301 https://$host$request_uri;
+
+    # Frontend production build (Vite dist folder)
+    root /var/www/sanjus/dist;
+    index index.html;
+
+    # Allow image uploads up to 25 MB
+    client_max_body_size 25m;
+
+    # Frontend Single Page App routing (React Router / Vite)
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # API Backend -> Node.js / PM2 on PORT 6888 (from server/.env)
+    location /api/ {
+        proxy_pass http://127.0.0.1:6888;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+        proxy_read_timeout 90s;
+    }
+
+    # ── Uploaded Images Storage ──
+    # NOTE ON CACHING:
+    # "expires" tells the customer's web browser how long to save a local copy
+    # in their phone or laptop cache for faster page loads.
+    # It DOES NOT DELETE anything from your VPS disk.
+    # Images remain on your VPS disk permanently until an Admin deletes them.
+    location /uploads/ {
+        # Path to your persistent uploads directory on the VPS
+        alias /var/www/sanjus/server/uploads/;
+
+        # Browser caching instructions for visitors (does NOT delete files on server)
+        expires 7d;
+        add_header Cache-Control "public, must-revalidate";
+        add_header X-Content-Type-Options nosniff;
+
+        autoindex off;
+
+        # Prevent access to hidden folders (like .tmp)
+        location ~ /\. {
+            deny all;
+        }
+
+        try_files $uri =404;
+    }
+}

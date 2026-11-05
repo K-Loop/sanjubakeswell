@@ -77,7 +77,7 @@ function CakeForm({ initial, sections = [], onSave, onCancel }) {
           <p className="text-[10px] text-[#E9DCC5]/40 mt-1">Or paste URL below</p>
         </div>
       </div>
-      {field("Image URL", "image", "text", "/cakes images/chocolate.webp")}
+      {field("Image URL", "image", "text", "Upload or enter image URL")}
       {field("Cake Name *", "name", "text", "e.g. Chocolate Truffle")}
       {field("Description", "description", "text", "Short description...")}
       <div className="grid grid-cols-2 gap-3">

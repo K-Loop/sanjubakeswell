@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import { BsStars } from "react-icons/bs";
 import { CUSTOM_CATEGORIES } from "../../data/customCakeData";
+import { getImageUrl } from "../../services/api";
 
 // 5 Main Categories styled with Official Brand Palette
 const GALLERY_CATEGORIES = [
@@ -168,7 +169,7 @@ export default function CustomCakeGallery({ onSelectCustomConcept, initialCatego
               {/* Image Container */}
               <div className="w-full aspect-[4/3] overflow-hidden relative bg-[#1F140D]">
                 <img
-                  src={type.image}
+                  src={getImageUrl(type.image)}
                   alt={type.name}
                   loading="lazy"
                   decoding="async"
